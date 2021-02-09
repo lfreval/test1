@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="test1.Voiture">
-    <Position X="2" Y="3" Width="1.5" />
+    <Position X="1.5" Y="3" Width="1.5" />
     <InheritanceLine Type="test1.Véhicule" FixedToPoint="true">
       <Path>
         <Point X="4.5" Y="2.94" />
-        <Point X="4.5" Y="3.002" />
-        <Point X="3.688" Y="3.002" />
-        <Point X="3.688" Y="2.906" />
-        <Point X="2.688" Y="2.906" />
-        <Point X="2.688" Y="3" />
+        <Point X="4.5" Y="3.19" />
+        <Point X="3.5" Y="3.19" />
+        <Point X="3.5" Y="2.625" />
+        <Point X="2.188" Y="2.625" />
+        <Point X="2.188" Y="3" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -27,6 +27,23 @@
       <HashCode>AAAAAAAAAAAIAAAEAIAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>Véhicule.vb</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="test1.Distance">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Distance.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="test1.Trajet">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Trajet.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_distance" />
+    </ShowAsAssociation>
   </Class>
   <Module Name="test1.Module1" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />

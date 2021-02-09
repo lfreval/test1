@@ -1,4 +1,7 @@
-﻿Public Class Véhicule
+﻿''' <summary>
+''' classe véhicule
+''' </summary>
+Public Class Véhicule
     Private _moteur As String = "V12"
     Private _châssis As String = "GT"
     Private _carrosserie As String = "Rouge"
