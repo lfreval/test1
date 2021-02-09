@@ -8,7 +8,10 @@ Module Module1
         ' MsgBox("VB est partout")
 
         Dim maClio As New Voiture()
-        Console.WriteLine(maClio.lesRoues)
+
+        ' maClio.lesRoues = "3 x 165/77R12"
+
+        Console.WriteLine(maClio)
         Console.ReadKey()
     End Sub
 

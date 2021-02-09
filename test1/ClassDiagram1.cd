@@ -1,10 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="test1.Voiture">
-    <Position X="5" Y="1" Width="1.5" />
+    <Position X="2" Y="3" Width="1.5" />
+    <InheritanceLine Type="test1.Véhicule" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="2.94" />
+        <Point X="4.5" Y="3.002" />
+        <Point X="3.688" Y="3.002" />
+        <Point X="3.688" Y="2.906" />
+        <Point X="2.688" Y="2.906" />
+        <Point X="2.688" Y="3" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
       <FileName>Voiture.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="test1.Véhicule">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAIAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Véhicule.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Module Name="test1.Module1" Collapsed="true">
