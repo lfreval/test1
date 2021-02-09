@@ -6,13 +6,20 @@ Option Explicit On
 ''' </summary>
 
 Module Module1
+    Sub Aide()
+        Console.WriteLine("voici l'aide :)")
+    End Sub
 
     Sub Main()
-        Dim maClio As New Voiture()
-        ' maClio.lesRoues = "3 x 165/77R12"
-        Console.WriteLine(maClio)
+        For Each argument As String In My.Application.CommandLineArgs
+            If argument = "--help" Or argument = "-h" Or argument = "/?" Then
+                Aide()
+                Environment.Exit(0)
+            End If
+        Next
 
-        Dim monTrajet As New Trajet()
+        Dim monTrajet As New Trajet(InputBox(My.Resources.Départ, "départ"), InputBox(My.Resources.Arrivée, "arrivée"), InputBox("distance ?", "km"))
+
 
         Console.ReadKey()
     End Sub

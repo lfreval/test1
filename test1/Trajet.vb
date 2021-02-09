@@ -7,6 +7,14 @@ Public Class Trajet
     Private _arrivée As String
     Private _distance As Distance
 
+    Sub New(départ As String, arrivée As String, distance As Integer)
+        _départ = départ
+        _arrivée = arrivée
+        ' _distance = distance
+    End Sub
+
+
+
     Public Sub Saisir()
         _départ = InputBox(My.Resources.Départ, "départ")
         _arrivée = InputBox(My.Resources.Arrivée, "arrivée")
