@@ -31,14 +31,14 @@
   <Class Name="test1.Distance">
     <Position X="4.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Distance.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="test1.Trajet">
     <Position X="7.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Trajet.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

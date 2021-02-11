@@ -6,9 +6,6 @@ Option Explicit On
 ''' </summary>
 
 Module Module1
-    Sub Aide()
-        Console.WriteLine("voici l'aide :)")
-    End Sub
 
     Sub Main()
         For Each argument As String In My.Application.CommandLineArgs
@@ -18,10 +15,15 @@ Module Module1
             End If
         Next
 
-        Dim monTrajet As New Trajet(InputBox(My.Resources.Départ, "départ"), InputBox(My.Resources.Arrivée, "arrivée"), InputBox("distance ?", "km"))
+        Dim dep As String = Saisir(My.Resources.Départ, "String").ToString()
+        Dim arr As String = Saisir(My.Resources.Arrivée, "String").ToString()
+        Dim dist As Integer = CInt(Saisir("distance ?", "Integer"))
 
+        Dim monTrajet As New Trajet(dep, arr, dist)
+        Console.WriteLine(monTrajet)
 
         Console.ReadKey()
     End Sub
+
 
 End Module

@@ -10,7 +10,7 @@ Public Class Trajet
     Sub New(départ As String, arrivée As String, distance As Integer)
         _départ = départ
         _arrivée = arrivée
-        ' _distance = distance
+        _distance = New Distance(distance)
     End Sub
 
 
@@ -19,4 +19,8 @@ Public Class Trajet
         _départ = InputBox(My.Resources.Départ, "départ")
         _arrivée = InputBox(My.Resources.Arrivée, "arrivée")
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return _départ & " => " & _arrivée & " " & _distance.ToString()
+    End Function
 End Class
