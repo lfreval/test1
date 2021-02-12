@@ -21,6 +21,6 @@ Public Class Trajet
     End Sub
 
     Public Overrides Function ToString() As String
-        Return _départ & " => " & _arrivée & " " & _distance.ToString()
+        Return _départ & " => " & _arrivée & " " & _distance & "."
     End Function
 End Class
