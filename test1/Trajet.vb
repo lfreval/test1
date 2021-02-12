@@ -7,13 +7,22 @@ Public Class Trajet
     Private _arrivée As String
     Private _distance As Distance
 
+    ''' <summary>
+    ''' constructeur d'un trajet
+    ''' </summary>
+    ''' <param name="départ">la ville de départ</param>
+    ''' <param name="arrivée">la ville d'arrivée</param>
+    ''' <param name="distance">la distance entre les deux villes</param>
     Sub New(départ As String, arrivée As String, distance As Integer)
         _départ = départ
         _arrivée = arrivée
         _distance = New Distance(distance)
+        Decompte.Instance.Plus()
     End Sub
 
-
+    Protected Overrides Sub Finalize()
+        Decompte.Instance.Moins()
+    End Sub
 
     Public Sub Saisir()
         _départ = InputBox(My.Resources.Départ, "départ")

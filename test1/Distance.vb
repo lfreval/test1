@@ -4,7 +4,13 @@
 
     Sub New(valeur As Integer)
         _d = valeur
+        Decompte.Instance.Plus()
     End Sub
+
+    Protected Overrides Sub Finalize()
+        Decompte.Instance.Moins()
+    End Sub
+
 
     Public Overrides Function ToString() As String
         Return "(" & _d & " " & _unité & ")"
