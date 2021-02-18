@@ -29,6 +29,9 @@ Module Module1
 
         Dim t2 As New Trajet("Nantes", "Paris", 400)
 
+        Console.WriteLine($"{monTrajet} -et- {t2}")
+        Console.WriteLine(monTrajet.ToString & " -et- " & t2.ToString)
+
         GetData()
         Console.ReadKey()
 
@@ -36,7 +39,7 @@ Module Module1
     End Sub
 
     Sub GetData()
-        Dim database As String = "trajets.db"
+        Dim database As String = "trajets.db3"
         Dim SQLstr As String = "SELECT * FROM trajet WHERE 1"
         Dim connection As String = "Data Source=" & database & ";Version=3"
         Dim SQLConn As New SQLiteConnection
