@@ -1,10 +1,10 @@
 ﻿Option Strict On
 Option Explicit On
+Imports System.Data.SQLite
 
 ''' <summary>
 ''' le programme principal
 ''' </summary>
-
 Module Module1
 
     Sub Main()
@@ -29,10 +29,29 @@ Module Module1
 
         Dim t2 As New Trajet("Nantes", "Paris", 400)
 
+        GetData()
         Console.ReadKey()
 
         Logs.Instance()
     End Sub
 
-
+    Sub GetData()
+        Dim database As String = "trajets.db"
+        Dim SQLstr As String = "SELECT * FROM trajet WHERE 1"
+        Dim connection As String = "Data Source=" & database & ";Version=3"
+        Dim SQLConn As New SQLiteConnection
+        Dim SQLcmd As New SQLiteCommand
+        Dim SQLdr As SQLiteDataReader
+        SQLConn.ConnectionString = connection 
+        SQLConn.Open() 
+        SQLcmd.Connection = SQLConn
+        SQLcmd.CommandText = SQLstr
+        SQLdr = SQLcmd.ExecuteReader()
+        While SQLdr.Read()
+            Dim t1 As New Trajet(SQLdr("depart").ToString, SQLdr("arrivee").ToString, CInt(SQLdr("distance").ToString))
+            Console.WriteLine(t1)
+        End While 
+        SQLdr.Close()
+        SQLConn.Close()
+    End Sub
 End Module
